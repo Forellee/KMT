@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.querySelector('form');
     const themeSwitcher = document.getElementById('themeSwitcher');
     const header = document.querySelector('header');
+    const easterEgg = document.getElementById('easterEgg');
+    const easterMusic = document.getElementById('easterMusic');
 
     openResumeFormBtn.addEventListener('click', () => {
         resumeModal.style.display = 'block';
@@ -26,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nameInput.value.trim() === '' || emailInput.value.trim() === '') {
             alert('Пожалуйста, заполните все обязательные поля.');
             event.preventDefault();
+        } else if (messageInput.value.trim().toUpperCase() === 'IDDQD') {
+            event.preventDefault();
+            easterEgg.style.display = 'flex';
+            easterMusic.play();
         }
     });
 

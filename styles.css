@@ -1,0 +1,297 @@
+
+/* Основные стили для всего документа */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background: #009FE3;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header.dark-theme {
+    background: #0033664f; /*Больше нет нужды в использовании, меняется через js*/
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme section {
+    background: #555;
+    color: #f4f4f4;
+}
+
+section h3 {
+    text-align: center;
+    color: #333;
+}
+
+body.dark-theme section h3 {
+    color: #f4f4f4;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+section ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body.dark-theme section ul li a {
+    color: #f4f4f4;
+}
+
+section ul li a:hover {
+    text-decoration: underline;
+}
+
+section .button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* Стиль кнопки для светлой темы */
+body:not(.dark-theme) section .button {
+    background: #009FE3;
+}
+
+section .button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul.social {
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+
+footer ul.social li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul.social li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul.social li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section .button {
+        width: 100%;
+    }
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.dark-theme .modal {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+body.dark-theme .modal-content {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme textarea {
+    background-color: #666;
+    color: #f4f4f4;
+    border: 1px solid #888;
+}
+
+input[type="submit"] {
+    background-color: #009FE3;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0077B5;
+}
+
+/* Theme switcher styles */
+.theme-switcher {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme .theme-switcher {
+    background-color: #555;
+    color: #f4f4f4;
+}

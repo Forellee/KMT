@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трудоустройство в ООО "Интермобилити.ЕВА"</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Трудоустройство в ООО 'Интермобилити.ЕВА'. Найдите вакансии и разместите свое резюме.">
+    <meta name="keywords" content="трудоустройство, вакансии, резюме, работа, Интермобилити">
+</head>
+<body class="light-theme">
+    <header>
+        <div class="container">
+            <h1>ООО "Интермобилити.ЕВА"</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                </ul>
+            </nav>
+            <button id="themeSwitcher" class="theme-switcher">Сменить тему</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Добро пожаловать на сайт трудоустройства!</h2>
+            <p>Здесь вы можете найти актуальные вакансии и разместить свое резюме.</p>
+            <section id="vacancies">
+                <h3>Последние вакансии</h3>
+                <ul>
+                    <li><a href="#">Технический директор</a></li>
+                    <li><a href="#">Менеджер по продажам</a></li>
+                    <li><a href="#">Разработчик программного обеспечения</a></li>
+                </ul>
+            </section>
+
+            <section id="resume">
+                <h3>Создайте свое резюме</h3>
+                <p>Заполните форму и разместите свое резюме для потенциальных работодателей.</p>
+                <button id="openResumeForm" class="button">Обратная связь</button>
+            </section>
+
+            <div id="resumeModal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Форма для связи</h3>
+                    <form action="#" method="post">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                        <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                        <button type="submit" class="button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ООО "Интермобилити.ЕВА". Все права защищены.</p>
+            <ul class="social">
+                <li><a href="https://vk.com/electric_eva">ВКонтакте</a></li>
+                <li><a href="https://evacharge.me">EVA intermobility</a></li>
+                <li><a href="https://www.mos.ru/city/projects/electro/">Энергия Москвы</a></li>
+                <li><a href="https://intermobility.group">Intermobility Group</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="functions.js"></script>
+</body>
+</html>
